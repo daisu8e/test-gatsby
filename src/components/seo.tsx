@@ -6,8 +6,8 @@
  */
 
 import React from "react"
-import {Helmet} from "react-helmet"
-import {useStaticQuery, graphql} from "gatsby"
+import { Helmet } from "react-helmet"
+import { useStaticQuery, graphql } from "gatsby"
 
 interface Props {
   description?: string
@@ -16,8 +16,8 @@ interface Props {
   title: string
 }
 
-function SEO({description = ``, lang = `en`, meta = [], title}: Props) {
-  const {site} = useStaticQuery(graphql`
+function SEO({ description = ``, lang = `en`, meta = [], title }: Props) {
+  const { site } = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
@@ -31,7 +31,7 @@ function SEO({description = ``, lang = `en`, meta = [], title}: Props) {
   const metaDescription = description || site.siteMetadata.description
   return (
     <Helmet
-      htmlAttributes={{lang}}
+      htmlAttributes={{ lang }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
