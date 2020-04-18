@@ -6,38 +6,32 @@
  */
 
 import React from "react"
-import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import {Helmet} from "react-helmet"
+import {useStaticQuery, graphql} from "gatsby"
 
 interface Props {
-  description?: string;
-  lang?: string;
-  meta?: [];
-  title: string;
+  description?: string
+  lang?: string
+  meta?: []
+  title: string
 }
 
-function SEO({ description = ``, lang = `en`, meta = [], title }: Props) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-          }
+function SEO({description = ``, lang = `en`, meta = [], title}: Props) {
+  const {site} = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          author
         }
       }
-    `
-  )
-
+    }
+  `)
   const metaDescription = description || site.siteMetadata.description
-
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
+      htmlAttributes={{lang}}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
