@@ -37,5 +37,11 @@ module.exports = ({ config }) => {
 
   config.resolve.extensions.push('.ts', '.tsx');
 
+  // for Sass
+  config.module.rules.push({
+    test: /\.scss$/,
+    use: ['style-loader', 'css-loader', 'sass-loader'],
+  });
+
   return config
 }
