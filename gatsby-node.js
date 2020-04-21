@@ -1,8 +1,7 @@
 exports.onCreateWebpackConfig = ({ actions }) => {
-  const path = require(`path`)
   actions.setWebpackConfig({
     resolve: {
-      modules: [path.resolve(__dirname, "src"), "node_modules"],
+      modules: ["src", "node_modules"],
     },
   })
 }
