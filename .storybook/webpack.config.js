@@ -21,6 +21,9 @@ module.exports = ({ config }) => {
   // Prefer Gatsby ES6 entrypoint (module) over commonjs (main) entrypoint
   config.resolve.mainFields = ["browser", "module", "main"]
 
+  // add src as root of absolute path
+  config.resolve.modules.push("src")
+
   // for TypeScript
   config.module.rules.push({
     test: /\.(ts|tsx)$/,
