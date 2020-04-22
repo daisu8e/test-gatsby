@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import "./index.scss"
+import './index.scss';
 
-const FiraSans = () => <></>
+const FiraSans = () => <></>;
 
-export default FiraSans
+export default FiraSans;

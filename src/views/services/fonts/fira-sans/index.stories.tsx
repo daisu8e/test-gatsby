@@ -1,14 +1,15 @@
-import React from "react"
-import { storiesOf } from "@storybook/react"
+import React from 'react';
+import { storiesOf } from '@storybook/react';
 
-import FiraSans from "./index"
+import FiraSans from './index';
 
-storiesOf(`services/fonts/fira-sans`, module)
-.add(`default`, () => (
+storiesOf('services/fonts/fira-sans', module)
+.add('default', () => (
   <>
     <FiraSans />
-    <div style={{ fontFamily: `FiraSans` }}>
+    <div style={{ fontFamily: 'FiraSans' }}>
       I'm Daisuke Katsumata & Aug 22, 1981.
     </div>
   </>
 ))
+;

@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 
-import "./index.scss"
+import './index.scss';
 
-const SourceCodePro = () => <></>
+const SourceCodePro = () => <></>;
 
-export default SourceCodePro
+export default SourceCodePro;
