@@ -3,6 +3,5 @@ import { storiesOf } from '@storybook/react';
 
 import Header from './index';
 
-storiesOf('components/header', module)
-.add('default', () => <Header siteTitle={'Site Title'} />)
-;
+const stories = storiesOf('components/header', module);
+stories.add('default', () => <Header siteTitle={'Site Title'} />);
