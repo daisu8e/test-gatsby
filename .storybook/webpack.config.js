@@ -22,7 +22,7 @@ module.exports = ({ config }) => {
   config.resolve.mainFields = ["browser", "module", "main"]
 
   // add src as root of absolute path
-  config.resolve.modules.push("src")
+  config.resolve.modules = ["node_modules", "src"]
 
   // for TypeScript
   config.module.rules.push({
