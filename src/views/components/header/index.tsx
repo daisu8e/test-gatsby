@@ -1,6 +1,7 @@
 import React, { FC } from "react"
 import { Link } from "gatsby"
 
+import FontAwesome from "views/components/icons/font-awesome"
 import { StyledDiv } from "./index.styled"
 
 interface Props {
@@ -13,6 +14,7 @@ const Header: FC<Props> = ({ siteTitle = `` }) => (
       <h1 style={{ margin: 0 }}>
         <Link to="/" style={{ color: `white`, textDecoration: `none` }}>{siteTitle}</Link>
       </h1>
+      <FontAwesome />
       <StyledDiv />
     </div>
   </header>
